@@ -1,4 +1,5 @@
-# Use DBI and RMySQL to connect to a databse
+# Connect to the databse ----
+# ===========================
 
 .con = DBI::dbConnect(
   RMySQL::MySQL(),
@@ -6,12 +7,10 @@
   host = "127.0.0.1"
 )
 
-# Use moodler
+# Explore database ----
+# =====================
 
 library(moodler)
-
-# Explore database
-
 get_courses(.con) # courses
 get_course_modules(.con, course.id = 2) # modules in a course
 
